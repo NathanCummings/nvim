@@ -6,7 +6,7 @@ local options = {
   expandtab = true,                        -- tabs become spaces in Insert mode
   foldmethod = "fold-syntax",              -- Syntax highlighting items specify folds
   ignorecase = true,                       -- ignore case in search patterns
-  linebreak - true,                        -- lines wrap without breaking words
+  linebreak = true,                        -- lines wrap without breaking words
   mouse = "a",                             -- allow the mouse to be used in neovim
   number = true,                           -- set numbered lines
   numberwidth = 2,                         -- set number column width to 2 {default 4}
