@@ -49,7 +49,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer"              -- buffer completions
   use "hrsh7th/cmp-path"                -- path completions
   use "hrsh7th/cmp-cmdline"             -- cmdline completions
-  use "hrsh7th/cmp-nvim-lsp"                 -- lsp completions
+  use "hrsh7th/cmp-nvim-lsp"            -- lsp completions
+  use "hrsh7th/cmp-nvim-lua"            -- lua completions
   use "saadparwaiz1/cmp_luasnip"        -- snippet completions
 
   -- snippets
@@ -59,6 +60,9 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig"           -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
 
   -- Colourschemes
   use "shaunsingh/nord.nvim"
