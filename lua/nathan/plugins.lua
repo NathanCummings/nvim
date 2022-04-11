@@ -43,6 +43,7 @@ return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim"          -- Have packer manage itself
   use "nvim-lua/plenary.nvim"           -- Useful lua functions used ny lots of plugins
+  use "folke/which-key.nvim"            -- opens a popup with suggestions to complete a key binding
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                -- The completion plugin
