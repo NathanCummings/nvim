@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"                    -- file explorer written in lua
   use "moll/vim-bbye"                               -- close buffers
   use "windwp/nvim-autopairs"                       -- autopairs, integrates with both cmp and treesitter
+  use "akinsho/bufferline.nvim"                     -- see open buffers along the top
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                            -- The completion plugin
@@ -80,7 +81,7 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring" -- set comment string based on cursor location
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
+  use "lewis6991/gitsigns.nvim"                     -- git decorations
 
   -- Colourschemes
   use "shaunsingh/nord.nvim"
