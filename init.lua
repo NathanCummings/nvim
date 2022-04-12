@@ -1,14 +1,16 @@
-require "nathan.options"
-require "nathan.keymaps"
-require "nathan.plugins"
-require "nathan.colourscheme"
-require "nathan.cmp"
-require "nathan.lsp"
-require "nathan.telescope"
-require "nathan.whichkey"
-require "nathan.nvim-tree"
-require "nathan.treesitter"
-require "nathan.autopairs"
-require "nathan.comment"
-require "nathan.gitsigns"
-require "nathan.bufferline"
+require("nathan.options")
+require("nathan.keymaps")
+require("nathan.plugins")
+require("nathan.colourscheme")
+require("nathan.cmp")
+require("nathan.lsp")
+require("nathan.telescope")
+require("nathan.whichkey")
+require("nathan.nvim-tree")
+require("nathan.treesitter")
+require("nathan.autopairs")
+require("nathan.comment")
+require("nathan.gitsigns")
+require("nathan.bufferline")
+require("nathan.toggleterm")
+require("nathan.lualine")

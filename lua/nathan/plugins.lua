@@ -51,6 +51,8 @@ return packer.startup(function(use)
   use "moll/vim-bbye"                               -- close buffers
   use "windwp/nvim-autopairs"                       -- autopairs, integrates with both cmp and treesitter
   use "akinsho/bufferline.nvim"                     -- see open buffers along the top
+  use "akinsho/toggleterm.nvim"                     -- a handy terminal
+  use "nvim-lualine/lualine.nvim"                   -- neovim status line
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                            -- The completion plugin
