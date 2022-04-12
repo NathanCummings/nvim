@@ -40,11 +40,13 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+
   -- My plugins here
   use "wbthomason/packer.nvim"          -- Have packer manage itself
   use "nvim-lua/plenary.nvim"           -- Useful lua functions used ny lots of plugins
   use "folke/which-key.nvim"            -- opens a popup with suggestions to complete a key binding
   use "kyazdani42/nvim-tree.lua"        -- file explorer written in lua
+  use "moll/vim-bbye"                   -- close buffers
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                -- The completion plugin
@@ -64,7 +66,14 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope.nvim"   -- finding files, text, etc...
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",  -- syntax parsing
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"            -- colourful parenthesis
 
   -- Colourschemes
   use "shaunsingh/nord.nvim"
