@@ -42,39 +42,45 @@ packer.init {
 return packer.startup(function(use)
 
   -- My plugins here
-  use "wbthomason/packer.nvim"          -- Have packer manage itself
-  use "nvim-lua/plenary.nvim"           -- Useful lua functions used ny lots of plugins
-  use "folke/which-key.nvim"            -- opens a popup with suggestions to complete a key binding
-  use "kyazdani42/nvim-tree.lua"        -- file explorer written in lua
-  use "moll/vim-bbye"                   -- close buffers
-  use "windwp/nvim-autopairs"           -- autopairs, integrates with both cmp and treesitter
+  use "wbthomason/packer.nvim"                      -- Have packer manage itself
+  use "nvim-lua/plenary.nvim"                       -- Useful lua functions used ny lots of plugins
+  use "kyazdani42/nvim-web-devicons"                -- icons for things like the file explorer
+  use "numToStr/Comment.nvim"                       -- Easily comment stuff
+  use "folke/which-key.nvim"                        -- opens a popup with suggestions to complete a key binding
+  use "kyazdani42/nvim-tree.lua"                    -- file explorer written in lua
+  use "moll/vim-bbye"                               -- close buffers
+  use "windwp/nvim-autopairs"                       -- autopairs, integrates with both cmp and treesitter
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp"                -- The completion plugin
-  use "hrsh7th/cmp-buffer"              -- buffer completions
-  use "hrsh7th/cmp-path"                -- path completions
-  use "hrsh7th/cmp-cmdline"             -- cmdline completions
-  use "hrsh7th/cmp-nvim-lsp"            -- lsp completions
-  use "hrsh7th/cmp-nvim-lua"            -- lua completions
-  use "saadparwaiz1/cmp_luasnip"        -- snippet completions
+  use "hrsh7th/nvim-cmp"                            -- The completion plugin
+  use "hrsh7th/cmp-buffer"                          -- buffer completions
+  use "hrsh7th/cmp-path"                            -- path completions
+  use "hrsh7th/cmp-cmdline"                         -- cmdline completions
+  use "hrsh7th/cmp-nvim-lsp"                        -- lsp completions
+  use "hrsh7th/cmp-nvim-lua"                        -- lua completions
+  use "saadparwaiz1/cmp_luasnip"                    -- snippet completions
 
   -- snippets
-  use "L3MON4D3/LuaSnip"                -- snippet engine
-  use "rafamadriz/friendly-snippets"    -- a bunch of snippets to use
+  use "L3MON4D3/LuaSnip"                            -- snippet engine
+  use "rafamadriz/friendly-snippets"                -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig"           -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "neovim/nvim-lspconfig"                       -- enable LSP
+  use "williamboman/nvim-lsp-installer"             -- simple to use language server installer
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"   -- finding files, text, etc...
+  use "nvim-telescope/telescope.nvim"               -- finding files, text, etc...
 
   -- Treesitter
   use {
-    "nvim-treesitter/nvim-treesitter",  -- syntax parsing
+    "nvim-treesitter/nvim-treesitter",              -- syntax parsing
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"            -- colourful parenthesis
+  use "p00f/nvim-ts-rainbow"                        -- colourful parenthesis
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- set comment string based on cursor location
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
   -- Colourschemes
   use "shaunsingh/nord.nvim"
