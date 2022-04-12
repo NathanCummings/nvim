@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"            -- opens a popup with suggestions to complete a key binding
   use "kyazdani42/nvim-tree.lua"        -- file explorer written in lua
   use "moll/vim-bbye"                   -- close buffers
+  use "windwp/nvim-autopairs"           -- autopairs, integrates with both cmp and treesitter
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"                -- The completion plugin
