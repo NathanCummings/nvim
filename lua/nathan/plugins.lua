@@ -53,6 +53,7 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim") -- a handy terminal
 	use("nvim-lualine/lualine.nvim") -- neovim status line
 	use("lukas-reineke/indent-blankline.nvim") -- see indents
+	use("goolord/alpha-nvim") -- a lua-powered greeter
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
