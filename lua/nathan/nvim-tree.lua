@@ -8,6 +8,13 @@ if not config_status_ok then
   return
 end
 
+vim.cmd [[
+  augroup close_when_last
+    autocmd!
+    autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif 
+  augroup end
+]]
+
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
@@ -62,7 +69,6 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
-  quit_on_open = 0,
   git_hl = 1,
   disable_window_picker = 0,
   root_folder_modifier = ":t",
