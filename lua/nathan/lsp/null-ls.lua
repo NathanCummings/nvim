@@ -11,6 +11,8 @@ null_ls.setup({
 	sources = {
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		diagnostics.flake8,
+		diagnostics.pylama,
+		-- diagnostics.mypy,
+		-- diagnostics.flake8,
 	},
 })
