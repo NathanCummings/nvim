@@ -56,6 +56,7 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim") -- a lua-powered greeter
 	use("ahmedkhalf/project.nvim") -- project management
 	use("christoomey/vim-tmux-navigator") -- seamlessly move around vim and tmux splits
+    use("ellisonleao/glow.nvim") -- markdown previewer
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
