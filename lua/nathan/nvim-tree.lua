@@ -90,5 +90,5 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
-  root_folder_modifier = ":t",
+  -- root_folder_modifier = ":t",
 }
