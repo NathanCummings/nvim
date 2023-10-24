@@ -59,14 +59,14 @@ local config = function()
 	})
 
 	-- typescript
-	-- lspconfig.tsserver.setup({
-	-- 	on_attach = on_attach,
-	-- 	capabilities = capabilities,
-	-- 	filetypes = {
-	-- 		"typescript",
-	-- 	},
-	-- 	root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
-	-- })
+	lspconfig.tsserver.setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+		filetypes = {
+			"typescript",
+		},
+		root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
+	})
 
 	-- bash
 	-- lspconfig.bashls.setup({
@@ -110,8 +110,8 @@ local config = function()
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
 	local black = require("efmls-configs.formatters.black")
-	-- local eslint_d = require("efmls-configs.linters.eslint_d")
-	-- local prettierd = require("efmls-configs.formatters.prettier_d")
+	local eslint_d = require("efmls-configs.linters.eslint_d")
+	local prettierd = require("efmls-configs.formatters.prettier_d")
 	-- local fixjson = require("efmls-configs.formatters.fixjson")
 	-- local shellcheck = require("efmls-configs.linters.shellcheck")
 	-- local shfmt = require("efmls-configs.formatters.shfmt")
@@ -127,12 +127,12 @@ local config = function()
 			-- "json",
 			-- "jsonc",
 			-- "sh",
-			-- "javascript",
-			-- "javascriptreact",
-			-- "typescript",
-			-- "typescriptreact",
-			-- "svelte",
-			-- "vue",
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"svelte",
+			"vue",
 			-- "markdown",
 			-- "docker",
 			-- "solidity",
@@ -149,15 +149,15 @@ local config = function()
 			languages = {
 				lua = { luacheck, stylua },
 				python = { flake8, black },
-				-- typescript = { eslint_d, prettierd },
+				typescript = { eslint_d, prettierd },
 				-- json = { eslint_d, fixjson },
 				-- jsonc = { eslint_d, fixjson },
 				-- sh = { shellcheck, shfmt },
-				-- javascript = { eslint_d, prettierd },
-				-- javascriptreact = { eslint_d, prettierd },
-				-- typescriptreact = { eslint_d, prettierd },
-				-- svelte = { eslint_d, prettierd },
-				-- vue = { eslint_d, prettierd },
+				javascript = { eslint_d, prettierd },
+				javascriptreact = { eslint_d, prettierd },
+				typescriptreact = { eslint_d, prettierd },
+				svelte = { eslint_d, prettierd },
+				vue = { eslint_d, prettierd },
 				-- markdown = { alex, prettierd },
 				-- docker = { hadolint, prettierd },
 				-- solidity = { solhint },
