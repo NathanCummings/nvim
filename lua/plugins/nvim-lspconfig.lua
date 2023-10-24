@@ -133,7 +133,7 @@ local config = function()
 			"typescriptreact",
 			"svelte",
 			"vue",
-			-- "markdown",
+			"markdown",
 			-- "docker",
 			-- "solidity",
 		},
@@ -164,8 +164,6 @@ local config = function()
 			},
 		},
 	})
-
-	
 end
 
 return {
