@@ -11,9 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require("config.autocmds")
 require("config.globals")
-require("config.options")
 require("config.keymaps")
+require("config.options")
 
 local opts = {
 	defaults = {
