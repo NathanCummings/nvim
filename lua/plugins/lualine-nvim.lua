@@ -5,6 +5,7 @@ local config = function()
 		options = {
 			theme = theme,
 			globalstatus = true,
+			disabled_filetypes = { "alpha" },
 		},
 		sections = {
 			lualine_a = { "mode" },

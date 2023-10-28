@@ -7,7 +7,7 @@ local vim_modes = {
 local default_opts = {
 	noremap = true,
 	silent = true,
-}
+    }
 
 --- @param opts (table|nil)
 --- @return table
