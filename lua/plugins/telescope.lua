@@ -4,6 +4,7 @@ local config = function()
 	local telescope = require("telescope")
 	telescope.setup({
 		defaults = {
+      file_ignore_patters = {"%.git/.*"},
 			mappings = {
 				i = {
 					["<C-j>"] = "move_selection_next",

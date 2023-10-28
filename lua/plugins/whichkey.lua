@@ -12,7 +12,7 @@ return {
 		})
 		whichkey.register({
 			["<leader>"] = {
-				-- a = { "<cmd>Alpha<cr>", "Alpha" },
+				a = { "<cmd>Alpha<cr>", "Alpha" },
 				b = {
 					"<cmd>lua require('telescope.builtin').buffers()<cr>",
 					"Buffers",
