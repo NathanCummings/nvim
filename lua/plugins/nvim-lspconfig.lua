@@ -35,11 +35,11 @@ local config = function()
 	})
 
 	-- json
-	-- lspconfig.jsonls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = { "json", "jsonc" },
-	-- })
+	lspconfig.jsonls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "json", "jsonc" },
+	})
 
 	-- python
 	lspconfig.pyright.setup({
@@ -69,42 +69,42 @@ local config = function()
 	})
 
 	-- bash
-	-- lspconfig.bashls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = { "sh" },
-	-- })
+	lspconfig.bashls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "sh" },
+	})
 
 	-- solidity
-	-- lspconfig.solidity.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = { "solidity" },
-	-- })
+	lspconfig.solidity.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "solidity" },
+	})
 
 	-- html, typescriptreact, javascriptreact, css, sass, scss, less, svelte, vue
-	-- lspconfig.emmet_ls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- 	filetypes = {
-	-- 		"html",
-	-- 		"typescriptreact",
-	-- 		"javascriptreact",
-	-- 		"javascript",
-	-- 		"css",
-	-- 		"sass",
-	-- 		"scss",
-	-- 		"less",
-	-- 		"svelte",
-	-- 		"vue",
-	-- 	},
-	-- })
+	lspconfig.emmet_ls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = {
+			"html",
+			"typescriptreact",
+			"javascriptreact",
+			"javascript",
+			"css",
+			"sass",
+			"scss",
+			"less",
+			"svelte",
+			"vue",
+		},
+	})
 
 	-- docker
-	-- lspconfig.dockerls.setup({
-	-- 	capabilities = capabilities,
-	-- 	on_attach = on_attach,
-	-- })
+	lspconfig.dockerls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
 
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
@@ -112,21 +112,21 @@ local config = function()
 	local black = require("efmls-configs.formatters.black")
 	local eslint_d = require("efmls-configs.linters.eslint_d")
 	local prettierd = require("efmls-configs.formatters.prettier_d")
-	-- local fixjson = require("efmls-configs.formatters.fixjson")
-	-- local shellcheck = require("efmls-configs.linters.shellcheck")
-	-- local shfmt = require("efmls-configs.formatters.shfmt")
-	-- local alex = require("efmls-configs.linters.alex")
-	-- local hadolint = require("efmls-configs.linters.hadolint")
-	-- local solhint = require("efmls-configs.linters.solhint")
+	local fixjson = require("efmls-configs.formatters.fixjson")
+	local shellcheck = require("efmls-configs.linters.shellcheck")
+	local shfmt = require("efmls-configs.formatters.shfmt")
+	local alex = require("efmls-configs.linters.alex")
+	local hadolint = require("efmls-configs.linters.hadolint")
+	local solhint = require("efmls-configs.linters.solhint")
 
 	-- configure efm server
 	lspconfig.efm.setup({
 		filetypes = {
 			"lua",
 			"python",
-			-- "json",
-			-- "jsonc",
-			-- "sh",
+			"json",
+			"jsonc",
+			"sh",
 			"javascript",
 			"javascriptreact",
 			"typescript",
@@ -134,8 +134,8 @@ local config = function()
 			"svelte",
 			"vue",
 			"markdown",
-			-- "docker",
-			-- "solidity",
+			"docker",
+			"solidity",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -150,17 +150,17 @@ local config = function()
 				lua = { luacheck, stylua },
 				python = { flake8, black },
 				typescript = { eslint_d, prettierd },
-				-- json = { eslint_d, fixjson },
-				-- jsonc = { eslint_d, fixjson },
-				-- sh = { shellcheck, shfmt },
+				json = { eslint_d, fixjson },
+				jsonc = { eslint_d, fixjson },
+				sh = { shellcheck, shfmt },
 				javascript = { eslint_d, prettierd },
 				javascriptreact = { eslint_d, prettierd },
 				typescriptreact = { eslint_d, prettierd },
 				svelte = { eslint_d, prettierd },
 				vue = { eslint_d, prettierd },
-				-- markdown = { alex, prettierd },
-				-- docker = { hadolint, prettierd },
-				-- solidity = { solhint },
+				markdown = { alex, prettierd },
+				docker = { hadolint, prettierd },
+				solidity = { solhint },
 			},
 		},
 	})
