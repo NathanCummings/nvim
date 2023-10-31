@@ -3,6 +3,9 @@ return {
 	lazy = false,
 	config = function()
 		require("lspsaga").setup({
+			code_action = {
+				extend_gitsigns = true,
+			},
 			-- keybinds for navigation in lspsaga window
 			move_in_saga = { prev = "<C-k>", next = "<C-j>" },
 			-- use enter to open file with finder
