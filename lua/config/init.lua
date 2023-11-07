@@ -21,20 +21,23 @@ local opts = {
 		lazy = true,
 	},
 	install = {
-		colorscheme = { "gruvbox-material" },
+		colorscheme = { "nord" },
 	},
-	rtp = {
-		disabled_plugins = {
-			"gzip",
-			"matchit",
-			"matchparent",
-			"netrwPlugin",
-			"tarPlugin",
-			"tohtml",
-			"tutor",
-			"zipPlugin",
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"matchit",
+				"matchparent",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
 		},
 	},
+    ui = { border = "single" }
 }
 
 require("lazy").setup("plugins", opts)

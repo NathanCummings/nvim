@@ -27,20 +27,25 @@ return {
 				g = { name = "Go" },
 				l = {
 					name = "LSP",
-					d = {
-						"<cmd>Telescope diagnostics<cr>",
-						"Document Diagnostics",
-					},
 					f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
 					i = { "<cmd>LspInfo<cr>", "Info" },
 					l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 					r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-					s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-					S = {
-						"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-						"Workspace Symbols",
+					t = {
+						name = "Telescope",
+						d = {
+							"<cmd>Telescope diagnostics<cr>",
+							"Document Diagnostics",
+						},
+						s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+						S = {
+							"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+							"Workspace Symbols",
+						},
 					},
 				},
+				L = { "<cmd>Lazy<CR>", "Lazy" },
+				M = { "<cmd>Mason<CR>", "Mason" },
 				q = { "<cmd>q!<CR>", "Quit" },
 				s = {
 					name = "Search",
@@ -48,7 +53,6 @@ return {
 					c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 					h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 					M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-					r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 					R = { "<cmd>Telescope registers<cr>", "Registers" },
 					k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 					C = { "<cmd>Telescope commands<cr>", "Commands" },
