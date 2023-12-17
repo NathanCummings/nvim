@@ -24,7 +24,6 @@ return {
 					f = { "<cmd>Telescope find_files<cr>", "Find File" },
 					r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 				},
-				g = { name = "Go" },
 				l = {
 					name = "LSP",
 					f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },

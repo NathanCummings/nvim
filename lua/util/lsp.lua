@@ -13,7 +13,7 @@ M.on_attach = function(client, bufnr)
 
 	mapkey("<leader>fd", "Lspsaga finder", "n", add_desctiption(opts, "Show references"))
 	mapkey("<leader>lp", "Lspsaga peek_definition", "n", add_desctiption(opts, "Peek definition"))
-	mapkey("<leader>gd", "Lspsaga goto_definition", "n", add_desctiption(opts, "Definition"))
+	mapkey("gd", "Lspsaga goto_definition", "n", add_desctiption(opts, "Definition"))
 	mapkey("<leader>la", "Lspsaga code_action", "n", add_desctiption(opts, "see available code actions"))
 	mapkey("<leader>rn", "Lspsaga rename", "n", add_desctiption(opts, "Rename"))
 	mapkey("<leader>D", "Lspsaga show_line_diagnostics", "n", add_desctiption(opts, "Line diagnostics"))
