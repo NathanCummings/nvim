@@ -49,17 +49,22 @@ local config = function()
 		on_attach = on_attach,
 		settings = {
 			pyright = {
-				disableOrganizeImports = false,
-				analysis = {
-					useLibraryCodeForTypes = true,
-					autoSearchPaths = true,
-					diagnosticMode = "workspace",
-					autoImportCompletions = true,
-				},
+				disableOrganizeImports = true,
+                python = {
+				    analysis = {
+				    	ignore = { '*' },
+				    },
+                },
 			},
 		},
         root_dir = lspconfig.util.root_pattern("venv")
 	})
+
+    lspconfig.ruff_lsp.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = {},
+    })
 
 	-- typescript
 	lspconfig.tsserver.setup({

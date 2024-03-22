@@ -22,9 +22,10 @@ M.on_attach = function(client, bufnr)
 	mapkey("<leader>nd", "Lspsaga diagnostic_jump_next", "n", add_desctiption(opts, "Next diagnostic"))
 	mapkey("K", "Lspsaga hover_doc", "n", add_desctiption(opts, "Documentation for symbol under cursor"))
 
-	if client.name == "pyright" then
-		mapkey("<Leader>oi", "PyrightOrganizeImports", "n", add_desctiption(opts, "Organise imports"))
-	end
+    if client.name == 'ruff_lsp' then
+        -- Disable hover in favor of Pyright
+        client.server_capabilities.hoverProvider = false
+    end
 end
 
 M.diagnostic_signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
