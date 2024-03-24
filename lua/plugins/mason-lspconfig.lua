@@ -1,17 +1,16 @@
 local opts = {
-	ensure_installed = {
-		"efm",
-		"lua_ls",
+    ensure_installed = {
+        "efm",
+        "lua_ls",
         "basedpyright",
-        "ruff-lsp"
-	},
-
-	automatic_installation = true,
+        "ruff_lsp"
+    },
+    automatic_installation = true,
 }
 
 return {
-	"williamboman/mason-lspconfig.nvim",
-	opts = opts,
-	event = "BufReadPre",
-	dependencies = "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    opts = opts,
+    event = "BufReadPre",
+    dependencies = "williamboman/mason.nvim",
 }
