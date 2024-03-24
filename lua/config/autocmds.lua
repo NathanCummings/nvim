@@ -11,3 +11,10 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     vim.lsp.buf.format({ name = 'efm' })
   end,
 })
+
+Lualine = require("plugins.lualine-nvim")
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.schedule(Lualine.config)
+	end,
+})
