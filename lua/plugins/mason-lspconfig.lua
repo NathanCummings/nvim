@@ -2,7 +2,8 @@ local opts = {
 	ensure_installed = {
 		"efm",
 		"lua_ls",
-        "pyright",
+        "basedpyright",
+        "ruff-lsp"
 	},
 
 	automatic_installation = true,

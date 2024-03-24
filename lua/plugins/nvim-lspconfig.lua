@@ -44,12 +44,13 @@ local config = function()
 	})
 
 	-- python
-	lspconfig.pyright.setup({
+	lspconfig.basedpyright.setup({
 		capabilities = capabilities,
 		on_attach = on_attach,
 		settings = {
 			pyright = {
 				disableOrganizeImports = true,
+                typeCheckingMode = "standard",
                 python = {
 				    analysis = {
 				    	ignore = { '*' },
