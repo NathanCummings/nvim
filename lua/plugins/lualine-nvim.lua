@@ -1,10 +1,10 @@
 local config = function()
-    local custom_nord = require("lualine.themes.nord")
-    custom_nord.normal.c.bg = "None"
+    local custom_theme = require("lualine.themes.everforest")
+    custom_theme.normal.c.bg = "None"
 
     require("lualine").setup({
         options = {
-            theme = custom_nord,
+            theme = custom_theme,
             globalstatus = true,
             disabled_filetypes = { "alpha" },
             component_separators = '|',
