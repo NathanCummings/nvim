@@ -13,7 +13,7 @@ local config = function()
         sections = {
             lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
             lualine_b = { "buffers" },
-            lualine_x = { "encoding", { "fileformat", symbols = { unix = " " } }, "filetype" },
+            lualine_x = { "encoding", { "fileformat", symbols = { unix = "" } }, "filetype" },
             lualine_y = { "progress" },
             lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 } },
         },
