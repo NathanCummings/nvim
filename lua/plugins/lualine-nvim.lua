@@ -5,7 +5,7 @@ local config = function()
     require("lualine").setup({
         options = {
             theme = custom_theme,
-            globalstatus = true,
+            -- globalstatus = true,
             disabled_filetypes = { "alpha" },
             component_separators = '|',
             section_separators = { left = '', right = '' },
