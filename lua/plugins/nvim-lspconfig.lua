@@ -49,6 +49,7 @@ local config = function()
         settings = {
             basedpyright = {
                 disableOrganizeImports = true,
+                typeCheckingMode = "standard", -- off, basic, standard, strict, all
                 python = {
                     analysis = {
                         ignore = { '*' },
@@ -59,7 +60,7 @@ local config = function()
         root_dir = lspconfig.util.root_pattern("venv")
     })
 
-    lspconfig.ruff_lsp.setup({
+    lspconfig.ruff.setup({
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {},

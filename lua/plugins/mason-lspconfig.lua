@@ -3,7 +3,7 @@ local opts = {
         "efm",
         "lua_ls",
         "basedpyright",
-        "ruff_lsp"
+        "ruff"
     },
     automatic_installation = true,
 }
