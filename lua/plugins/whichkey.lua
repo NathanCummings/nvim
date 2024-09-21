@@ -30,6 +30,7 @@ return {
             { "<leader>L",  "<cmd>Lazy<CR>",                                       desc = "Lazy" },
             { "<leader>M",  "<cmd>Mason<CR>",                                      desc = "Mason" },
             { "<leader>q",  "<cmd>q!<CR>",                                         desc = "Quit" },
+            { "<leader>r",  "<cmd>MoltenEvaluateOperator<CR>",                     desc = "Evaluate operator" },
             { "<leader>s",  group = "Search" },
             { "<leader>sb", "<cmd>Telescope git_branches<cr>",                     desc = "Checkout branch" },
             { "<leader>sc", "<cmd>Telescope colorscheme<cr>",                      desc = "Colorscheme" },
