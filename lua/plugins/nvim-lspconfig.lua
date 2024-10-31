@@ -24,6 +24,7 @@ local config = function()
                 -- make the language server recognize "vim" global
                 diagnostics = {
                     globals = { "vim" },
+                    disable = {"missing-parameters", "missing-fields"},
                 },
                 workspace = {
                     -- make language server aware of runtime files
@@ -57,7 +58,7 @@ local config = function()
                 },
             },
         },
-        root_dir = lspconfig.util.root_pattern("venv")
+        root_dir = lspconfig.util.root_pattern(".venv", "venv", "pyproject.toml")
     })
 
     lspconfig.ruff.setup({
