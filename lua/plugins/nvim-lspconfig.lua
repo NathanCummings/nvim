@@ -24,7 +24,7 @@ local config = function()
                 -- make the language server recognize "vim" global
                 diagnostics = {
                     globals = { "vim" },
-                    disable = {"missing-parameters", "missing-fields"},
+                    disable = { "missing-parameters", "missing-fields" },
                 },
                 workspace = {
                     -- make language server aware of runtime files

@@ -18,7 +18,7 @@ opt.hlsearch = false
 opt.number = true
 opt.numberwidth = 2
 opt.relativenumber = true
-opt.termguicolors = true
+-- opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
@@ -42,6 +42,7 @@ opt.iskeyword:append('-')
 opt.mouse:append('a')
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
-opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+opt.guicursor =
+"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 opt.encoding = "UTF-8"
 opt.foldmethod = "syntax"
