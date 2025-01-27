@@ -5,7 +5,6 @@
   "better-escape.nvim": { "branch": "master", "commit": "199dcc2643dec5d8dbdab4ec672cf405224dcb3b" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
-  "conform.nvim": { "branch": "master", "commit": "363243c03102a531a8203311d4f2ae704c620d9b" },
   "efmls-configs-nvim": { "branch": "main", "commit": "8d7ede48afa7d0344fa62fefb95132c0dad41e97" },
   "everforest-nvim": { "branch": "main", "commit": "616864c0c534b1eaf650ef913512dcde80ababfb" },
   "gitsigns.nvim": { "branch": "main", "commit": "d8918f06624dd53b9a82bd0e29c31bcfd541b40d" },
