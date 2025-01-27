@@ -3,9 +3,10 @@ vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave" }, {
     callback = function(args)
         local buf = args.buf or vim.api.nvim_get_current_buf()
 
-        -- Exclude mini.files buffers or any other specific filetypes
+        -- Exclude mini.files, lspinfo, or other specific filetypes
+        local excluded_filetypes = { minifiles = true, lspinfo = true }
         local filetype = vim.bo[buf].filetype
-        if filetype == "minifiles" then
+        if excluded_filetypes[filetype] then
             return
         end
 
