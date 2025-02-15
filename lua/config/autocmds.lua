@@ -1,12 +1,18 @@
 vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave" }, {
     pattern = "*",
-    callback = function(args)
-        local buf = args.buf or vim.api.nvim_get_current_buf()
+    callback = function()
+        local buf = vim.api.nvim_get_current_buf()
 
         -- Exclude mini.files, lspinfo, or other specific filetypes
-        local excluded_filetypes = { minifiles = true, lspinfo = true }
+        local excluded_filetypes = { minifiles = true }
         local filetype = vim.bo[buf].filetype
         if excluded_filetypes[filetype] then
+            return
+        end
+
+        -- Ensure the buffer has an active LSP client before formatting
+        local clients = vim.lsp.get_clients({ bufnr = buf })
+        if not clients or vim.tbl_isempty(clients) then
             return
         end
 
