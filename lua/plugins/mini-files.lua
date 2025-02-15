@@ -2,7 +2,6 @@ return {
     "echasnovski/mini.files",
     version = false,
     lazy = false,
-    -- opts = { mappings = { go_in_plus = '<CR>', synchronize = 's' }, windows = { preview = true, width_preview = 80 } },
     config = function()
         require("mini.files").setup { mappings = { go_in_plus = '<CR>', synchronize = 's' }, windows = { preview = true, width_preview = 80 } }
         -- Add rounded corners
