@@ -22,6 +22,6 @@ end
 
 return {
     "nvim-lualine/lualine.nvim",
-    lazy = false,
+    event = "BufWinEnter",
     config = config,
 }
